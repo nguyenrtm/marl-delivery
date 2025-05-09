@@ -1,8 +1,10 @@
 from env import Environment
-from greedyagent import GreedyAgents as Agents
-# from improved_bfs_agent import ImprovedBFSAgents as Agents
-# from a_star_agent import AStarAgents as Agents
+# from agents.greedyagent import GreedyAgents as Agents
+# from agents.improved_bfs_agent import ImprovedBFSAgents as Agents
+# from agents.a_star_agent import AStarAgents as Agents
+from agents.a_star_aware_agent import AStarAwareAgents as Agents
 
+from tqdm import tqdm
 import numpy as np
 import os
 import sys
@@ -39,7 +41,7 @@ if __name__=="__main__":
 
     reward_lst = []
 
-    for s in range(50):
+    for s in tqdm(range(50)):
         np.random.seed(s)
 
         env = Environment(map_file=args.map, max_time_steps=args.max_time_steps,
@@ -60,7 +62,7 @@ if __name__=="__main__":
             # print("Step:", t)
             # env.render()
             t += 1
-        print("\nReward:", infos['total_reward'])
-        print('=========Episode finished=========')
+        # print("\nReward:", infos['total_reward'])
+        # print('=========Episode finished=========')
         reward_lst.append(infos['total_reward'])
     print("Average reward over 50 runs:", np.round(np.mean(reward_lst), 2), "+/-", np.round(np.std(reward_lst), 2))

@@ -1,0 +1,151 @@
+
+Reward: 166.35999999999981
+=========Episode finished=========
+
+Reward: 157.9899999999999
+=========Episode finished=========
+
+Reward: 166.4800000000001
+=========Episode finished=========
+
+Reward: 57.80000000000002
+=========Episode finished=========
+
+Reward: 254.96000000000106
+=========Episode finished=========
+
+Reward: 79.07999999999997
+=========Episode finished=========
+
+Reward: 88.13999999999994
+=========Episode finished=========
+
+Reward: 285.98999999999984
+=========Episode finished=========
+
+Reward: 218.73000000000008
+=========Episode finished=========
+
+Reward: 126.84999999999982
+=========Episode finished=========
+
+Reward: 148.37
+=========Episode finished=========
+
+Reward: 236.2500000000007
+=========Episode finished=========
+
+Reward: 117.5099999999997
+=========Episode finished=========
+
+Reward: 303.63000000000056
+=========Episode finished=========
+
+Reward: 97.15999999999991
+=========Episode finished=========
+
+Reward: 296.15000000000026
+=========Episode finished=========
+
+Reward: 266.7400000000009
+=========Episode finished=========
+
+Reward: 87.52000000000005
+=========Episode finished=========
+
+Reward: 306.4500000000013
+=========Episode finished=========
+
+Reward: 18.910000000000004
+=========Episode finished=========
+
+Reward: 77.97999999999996
+=========Episode finished=========
+
+Reward: 78.43999999999997
+=========Episode finished=========
+
+Reward: 235.04000000000016
+=========Episode finished=========
+
+Reward: 187.1799999999999
+=========Episode finished=========
+
+Reward: 78.84999999999994
+=========Episode finished=========
+
+Reward: 89.0299999999998
+=========Episode finished=========
+
+Reward: 28.46999999999999
+=========Episode finished=========
+
+Reward: 117.70000000000005
+=========Episode finished=========
+
+Reward: 98.40999999999974
+=========Episode finished=========
+
+Reward: 346.8000000000009
+=========Episode finished=========
+
+Reward: 28.819999999999997
+=========Episode finished=========
+
+Reward: 176.6700000000004
+=========Episode finished=========
+
+Reward: 127.94999999999985
+=========Episode finished=========
+
+Reward: 49.50000000000004
+=========Episode finished=========
+
+Reward: 107.93999999999991
+=========Episode finished=========
+
+Reward: 107.83999999999996
+=========Episode finished=========
+
+Reward: 137.9800000000001
+=========Episode finished=========
+
+Reward: 275.31000000000006
+=========Episode finished=========
+
+Reward: 157.05999999999997
+=========Episode finished=========
+
+Reward: 48.66000000000002
+=========Episode finished=========
+
+Reward: 147.7
+=========Episode finished=========
+
+Reward: 156.2399999999999
+=========Episode finished=========
+
+Reward: 78.31999999999995
+=========Episode finished=========
+
+Reward: 127.0699999999999
+=========Episode finished=========
+
+Reward: 157.67000000000021
+=========Episode finished=========
+
+Reward: 137.01999999999984
+=========Episode finished=========
+
+Reward: 38.629999999999995
+=========Episode finished=========
+
+Reward: 88.09999999999984
+=========Episode finished=========
+
+Reward: 176.2400000000004
+=========Episode finished=========
+
+Reward: 117.0700000000001
+=========Episode finished=========
+Average reward over 50 runs: 145.22 +/- 81.43
