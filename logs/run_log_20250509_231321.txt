@@ -1,1 +1,0 @@
-Average reward over 50 runs: 2859.8 +/- 124.06

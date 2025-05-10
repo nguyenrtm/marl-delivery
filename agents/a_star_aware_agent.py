@@ -158,8 +158,6 @@ class AStarAwareAgents:
         self.reservation_table = {(r[0], r[1], self.time): i for i, r in enumerate(self.robots)}
 
         robot_indices = list(range(self.n_robots))
-        robot_indices.sort()  # simple prioritization by robot ID
-        reserved_positions = set()
 
         for i in robot_indices:
             rx, ry, carrying = self.robots[i]
@@ -178,11 +176,6 @@ class AStarAwareAgents:
                     if move in dxdy:
                         dx, dy = dxdy[move]
                         next_pos = (rx + dx, ry + dy)
-                        if next_pos in reserved_positions:
-                            move = 'S'
-                            action = '0'
-                        else:
-                            reserved_positions.add(next_pos)
                     actions.append((move, action))
                     if move != 'S':
                         dxdy2 = {'U': (-1, 0), 'D': (1, 0), 'L': (0, -1), 'R': (0, 1)}
@@ -217,11 +210,6 @@ class AStarAwareAgents:
                     if move in dxdy:
                         dx, dy = dxdy[move]
                         next_pos = (rx + dx, ry + dy)
-                        if next_pos in reserved_positions:
-                            move = 'S'
-                            action = '0'
-                        else:
-                            reserved_positions.add(next_pos)
                     actions.append((move, action))
                     if move != 'S':
                         dxdy2 = {'U': (-1, 0), 'D': (1, 0), 'L': (0, -1), 'R': (0, 1)}
