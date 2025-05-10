@@ -1,4 +1,4 @@
-# marl-delivery
+# Online Multi-Agent Pickup and Delivery with Deadline Constraints
 MARL samples code for Package Delivery.
 You has to run and test against BFS agents for the following 5 configs.
 The seeds are given at later time.
