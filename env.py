@@ -218,6 +218,7 @@ class Environment:
                 else:
                     j = old_pos[new_pos]
                     if (j != i) and (computed_moved[j] == 0): # We must wait for the conflict resolve
+                        # print('conflict!')
                         continue
                     # We can decide where the robot can go now
                     can_move = True
@@ -357,39 +358,39 @@ class Environment:
             print('\t'.join(str(cell) for cell in row))
         
 
-if __name__=="__main__":
-    env = Environment('map.txt', 10, 2, 5)
-    state = env.reset()
-    print("Initial State:", state)
-    print("Initial State:")
-    env.render()
+# if __name__=="__main__":
+#     env = Environment('map.txt', 10, 2, 5)
+#     state = env.reset()
+#     print("Initial State:", state)
+#     print("Initial State:")
+#     env.render()
 
-    # Agents
-    # Initialize agents
-    from greedyagent import GreedyAgents as Agents
-    agents = Agents()   # You should define a default parameters here
-    agents.init_agents(state) # You have a change to init states which can be used or not. Depend on your choice
-    print("Agents initialized.")
+#     # Agents
+#     # Initialize agents
+#     from greedyagent import GreedyAgents as Agents
+#     agents = Agents()   # You should define a default parameters here
+#     agents.init_agents(state) # You have a change to init states which can be used or not. Depend on your choice
+#     print("Agents initialized.")
     
-    # Example actions for robots
-    list_actions = ['S', 'L', 'R', 'U', 'D']
-    n_robots = len(state['robots'])
-    done = False
-    t = 0
-    while not done:
-        actions = agents.get_actions(state) 
-        state, reward, done, infos = env.step(actions)
+#     # Example actions for robots
+#     list_actions = ['S', 'L', 'R', 'U', 'D']
+#     n_robots = len(state['robots'])
+#     done = False
+#     t = 0
+#     while not done:
+#         actions = agents.get_actions(state) 
+#         state, reward, done, infos = env.step(actions)
     
-        print("\nState after step:")
-        env.render()
-        print(f"Reward: {reward}, Done: {done}, Infos: {infos}")
-        print("Total Reward:", env.total_reward)
-        print("Time step:", env.t)
-        print("Packages:", state['packages'])
-        print("Robots:", state['robots'])
+#         print("\nState after step:")
+#         env.render()
+#         print(f"Reward: {reward}, Done: {done}, Infos: {infos}")
+#         print("Total Reward:", env.total_reward)
+#         print("Time step:", env.t)
+#         print("Packages:", state['packages'])
+#         print("Robots:", state['robots'])
 
-        # For debug purpose
-        t += 1
-        if t == 100:
-            break
+#         # For debug purpose
+#         t += 1
+#         if t == 100:
+#             break
     

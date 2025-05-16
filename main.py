@@ -1,8 +1,31 @@
 from env import Environment
-#from agent import Agents
-from greedyagent import GreedyAgents as Agents
+# from agents.greedyagent import GreedyAgents as Agents
+# from agents.improved_bfs_agent import ImprovedBFSAgents as Agents
+# from agents.a_star_agent import AStarAgents as Agents
+from agents.a_star_aware_agent import AStarAwareAgents as Agents
 
+from tqdm import tqdm
 import numpy as np
+import os
+import sys
+from datetime import datetime
+
+os.makedirs("logs", exist_ok=True)
+log_filename = f"logs/run_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+log_file = open(log_filename, "w")
+
+class Tee:
+    def __init__(self, *streams):
+        self.streams = streams
+    def write(self, message):
+        for s in self.streams:
+            s.write(message)
+            s.flush()
+    def flush(self):
+        for s in self.streams:
+            s.flush()
+
+sys.stdout = Tee(sys.__stdout__, log_file)
 
 if __name__=="__main__":
     import argparse
@@ -15,26 +38,31 @@ if __name__=="__main__":
     parser.add_argument("--map", type=str, default="map.txt", help="Map name")
 
     args = parser.parse_args()
-    np.random.seed(args.seed)
 
-    env = Environment(map_file=args.map, max_time_steps=args.max_time_steps,
-                      n_robots=args.num_agents, n_packages=args.n_packages,
-                      seed = args.seed)
-    
-    state = env.reset()
-    agents = Agents()
-    agents.init_agents(state)
-    print(state)
-    #env.render()
-    done = False
-    t = 0
-    while not done:
-        actions = agents.get_actions(state)
-        next_state, reward, done, infos = env.step(actions)
-        state = next_state
-        env.render()
-        t += 1
+    reward_lst = []
 
-    print("Episode finished")
-    print("Total reward:", infos['total_reward'])
-    print("Total time steps:", infos['total_time_steps'])
+    for s in tqdm(range(50)):
+        np.random.seed(s)
+
+        env = Environment(map_file=args.map, max_time_steps=args.max_time_steps,
+                        n_robots=args.num_agents, n_packages=args.n_packages,
+                        seed=s)
+        
+        state = env.reset()
+        agents = Agents()
+        agents.init_agents(state)
+        # print(state)
+        #env.render()
+        done = False
+        t = 0
+        while not done:
+            actions = agents.get_actions(state)
+            next_state, reward, done, infos = env.step(actions)
+            state = next_state
+            # print("Step:", t)
+            # env.render()
+            t += 1
+        # print("\nReward:", infos['total_reward'])
+        # print('=========Episode finished=========')
+        reward_lst.append(infos['total_reward'])
+    print("Average reward over 50 runs:", np.round(np.mean(reward_lst), 2), "+/-", np.round(np.std(reward_lst), 2))
