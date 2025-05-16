@@ -1,8 +1,8 @@
 # Online Multi-Agent Pickup and Delivery with Deadline Constraints
 ## Members
-1. Nguyen Binh Nguyen
-2. Ngo Danh Lam
-3. Pham Cong Minh
+1. Nguyen Binh Nguyen (21020526)
+2. Ngo Danh Lam (21021512)
+3. Pham Cong Minh (22028239)
 
 ## Testing Scripts
 For results on our proposed method, Floyd-Warshall Heuristic with Multi-Greedy Prioritized Planning (FW-PP), please import ```mapd-project.ipynb``` notebook on Kaggle and run.
