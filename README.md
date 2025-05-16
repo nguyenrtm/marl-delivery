@@ -6,44 +6,53 @@ The seeds are given at later time.
 - Version v1.1: Fix a small logic of `start_time` should less than `dead_line`
 
 # Testing scripts
-Results averaged over 50 runs
+Results averaged over 10 runs
 ```python main.py --seed 10 --max_time_steps 1000 --map map1.txt --num_agents 5 --n_packages 100```
-greedyagent: 32.61 +/- 15.39
-improved_bfs_agent: 83.65 +/- 56.35
-a_star_agent: 91.47 +/- 60.43
-a_star_aware_agent: 874.22 +/- 140.51
+
+greedyagent: 42.45 +/- 14.04
+
+improved_bfs_agent: 80.81 +/- 36.0
+
+a_star_agent: 120.23 +/- 72.91
+
+a_star_aware_agent: 901.4 +/- 36.31
 
 ```python main.py --seed 10 --max_time_steps 1000 --map map2.txt --num_agents 5 --n_packages 100```
-greedyagent: 28.9 +/- 15.46
-improved_bfs_agent: 79.05 +/- 52.93
-a_star_agent: 99.46 +/- 68.03
-a_star_aware_agent: 726.62 +/- 140.31
+
+greedyagent: 26.4 +/- 17.24
+
+improved_bfs_agent: 62.28 +/- 29.83
+
+a_star_agent: 115.37 +/- 86.89
+
+a_star_aware_agent: 725.12 +/- 85.13
 
 ```python main.py --seed 10 --max_time_steps 1000 --map map3.txt --num_agents 5 --n_packages 500```
-greedyagent: 17.33 +/- 11.37
-improved_bfs_agent: 53.57 +/- 41.0
-a_star_agent: 69.59 +/- 42.76
-a_star_aware_agent: 647.54 +/- 266.65
+
+greedyagent: 14.4 +/- 11.07
+
+improved_bfs_agent: 48.49 +/- 29.35
+
+a_star_agent: 59.0 +/- 31.91
+
+a_star_aware_agent: 707.37 +/- 274.07
 
 ```python main.py --seed 10 --max_time_steps 1000 --map map4.txt --num_agents 10 --n_packages 500```
-greedyagent: 49.98 +/- 17.73
-improved_bfs_agent: 166.56 +/- 85.54
-a_star_agent: 145.22 +/- 81.43
-a_star_aware_agent: 2859.8 +/- 124.06
+
+greedyagent: 44.99 +/- 13.5
+
+improved_bfs_agent: 142.23 +/- 53.87
+
+a_star_agent: 160.24 +/- 71.89
+
+a_star_aware_agent: 2841.96 +/- 90.61
 
 ```python main.py --seed 10 --max_time_steps 1000 --map map5.txt --num_agents 10 --n_packages 1000```
-greedyagent: 15.96 +/- 13.41
-improved_bfs_agent: 34.57 +/- 29.59
-a_star_agent: 42.71 +/- 31.31
-a_star_aware_agent: 118.42 +/- 70.53
 
-# For RL testing
-- You can use `simple_PPO.ipynb` as the starting point.
-- Avoid modify the class `Env`, you can try to modify the `convert_state` function or `reward_shaping`
-- You can choose to use or change the standard `PPO`. Note that: It is not easy to match the greedy agent, using RL.
+greedyagent: 20.0 +/- 15.04
 
+improved_bfs_agent: 37.4 +/- 29.72
 
-# TODO:
-- [x]: Add BFS agents
-- [x]: Add test scripts
-- [x]: Add RL agents
+a_star_agent: 59.53 +/- 36.09
+
+a_star_aware_agent: 141.35 +/- 82.57
