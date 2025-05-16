@@ -1,5 +1,5 @@
-# marl-delivery
-MARL sample code for Package Delivery.
+# Online Multi-Agent Pickup and Delivery with Deadline Constraints
+MARL samples code for Package Delivery.
 
 # Testing scripts
 Full experiments on seed 2025 can be ran with the following commmand:
